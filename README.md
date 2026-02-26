@@ -297,7 +297,7 @@ __Fig.18:__ Export functionality for downloading carbon report
 ### 1 Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/EcoStep-Carbon-Calculator-Dashboard.git
+git clone https://github.com/saadsirajulmustafa/EcoStep-Carbon-Calculator-Dashboard.git
 cd EcoStep-Carbon-Calculator-Dashboard
 ```
 

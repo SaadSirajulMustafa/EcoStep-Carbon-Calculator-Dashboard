@@ -14,6 +14,14 @@ This project was developed during **PYSPHERE 2026**, a university-level programm
 - [Introduction](#introduction)
 - [Objectives](#objectives)
 - [Key Features](#key-features)
+  - [1. Transport emissions calculator](#1-transport-emissions-calculator)
+  - [2. Electricity usage calculator](#2-electricity-usage-calculator)
+  - [3. Diet impact estimator](#3-diet-impact-estimator)
+  - [4. Daily and monthly summary](#4-daily-and-monthly-summary)
+  - [5. Impact Classification Function](#5-impact-classification-function)
+  - [6. Contextual equivalents](#6-contextual-equivalents)
+  - [7. Smart suggestions](#7-smart-suggestions)
+  - [8. Data Visualization Section](#8-data-visualization-section)
 - [Screenshots](#screenshots)
   - [1. Main dashboard interface](#1-main-dashboard-interface)
   - [2. Sidebar](#2-sidebar)
@@ -23,7 +31,12 @@ This project was developed during **PYSPHERE 2026**, a university-level programm
   - [6. Smart Suggestion Section](#6-smart-suggestion-section)
   - [7. Export Section](#7-export-section)
 - [Resources and Tools Used](#resources-and-tools-used)
-- [AI Usage](#ai-usage)
+- [How to Run the App](#how-to-run-the-app)
+  - [1 Clone the Repository](#1-clone-the-repository)
+  - [2️ (Optional but Recommended) Create a Virtual Environment](#2️-optional-but-recommended-create-a-virtual-environment)
+  - [3️ Install Dependencies](#3️-install-dependencies)
+  - [4️ Run the Application](#4️-run-the-application)
+  - [5️ Open in Browser](#5️-open-in-browser)
 
 ---
 
@@ -43,7 +56,7 @@ The EcoStep Carbon Calculator is a Python-based web application that helps users
 
 ## Key Features
 
-<span style="color:teal; font-weight:bold;">1. Transport emissions calculator</span>
+### <span style="color:teal; font-weight:bold;">1. Transport emissions calculator</span>
 
 Users select fuel type (petrol or diesel) and enter liters used; the app calculates emissions.
 
@@ -57,7 +70,7 @@ __Formula:__
 
 - None (EV / Walk / Cycle) → `CO₂` = `0`
 
-<span style="color:teal; font-weight:bold;">2. Electricity usage calculator</span>
+### <span style="color:teal; font-weight:bold;">2. Electricity usage calculator</span>
 
 Users input daily usage hours for AC, TV, laptop, and LED lights; the app converts this into kWh and then into kg CO₂e.
 
@@ -82,7 +95,7 @@ __Calculation:__
 - `CO₂` = `Total Electricity × 0.43`  
 
 
-<span style="color:teal; font-weight:bold;">3. Diet impact estimator</span>
+### <span style="color:teal; font-weight:bold;">3. Diet impact estimator</span>
 
 Users choose between high meat, mixed, or vegetarian/vegan diet patterns.  
 
@@ -99,12 +112,12 @@ Users choose between high meat, mixed, or vegetarian/vegan diet patterns.
 __Total carbon footprint:__  
 `Total CO₂ = Transport + Electricity + Diet`
 
-<span style="color:teal; font-weight:bold;">4. Daily and monthly summary</span>
+### <span style="color:teal; font-weight:bold;">4. Daily and monthly summary</span>
 
 Aggregates emissions and shows total daily and projected monthly footprint.  
 `Monthly CO₂ = Daily Total × 30`
 
-<span style="color:teal; font-weight:bold;">5. Impact Classification Function</span>
+### <span style="color:teal; font-weight:bold;">5. Impact Classification Function</span>
 
 <div align="center">
 
@@ -116,7 +129,7 @@ Aggregates emissions and shows total daily and projected monthly footprint.
 
 </div>
 
-<span style="color:teal; font-weight:bold;">6. Contextual equivalents</span>
+### <span style="color:teal; font-weight:bold;">6. Contextual equivalents</span>
 
 - __Trees Required:__ One mature tree absorbs ~0.057 kg CO₂/day  
   `Trees = Total CO₂ / 0.057`
@@ -127,12 +140,12 @@ Aggregates emissions and shows total daily and projected monthly footprint.
 - __Driving Distance Equivalent:__ Petrol car emits 0.170 kg CO₂/km  
   `Driving Distance = Total CO₂ / 0.170`
 
-<span style="color:teal; font-weight:bold;">7. Smart suggestions</span>
+### <span style="color:teal; font-weight:bold;">7. Smart suggestions</span>
 
 Identifies the highest impact category:  
 `Dominant = max(Transport, Electricity, Diet)`
 
-<span style="color:teal; font-weight:bold;">8. Data Visualization Section</span>
+### <span style="color:teal; font-weight:bold;">8. Data Visualization Section</span>
 
 - __Pie Chart:__ Percentage contribution of Transport, Electricity, Diet  
 - __Bar Chart:__ Actual emission values (kg CO₂e) for each category
@@ -276,3 +289,64 @@ __Fig.18:__ Export functionality for downloading carbon report
   - [UK GHG conversion factors 2025](https://www.gov.uk/government/publications/greenhouse-gas-reporting-conversion-factors-2025)
   - [Diet emissions data](https://ourworldindata.org/environmental-impacts-of-food)  
 - __Development environment:__ VS Code
+
+---
+
+## How to Run the App
+
+### 1 Clone the Repository
+
+```bash
+git clone https://github.com/your-username/EcoStep-Carbon-Calculator-Dashboard.git
+cd EcoStep-Carbon-Calculator-Dashboard
+```
+
+---
+
+### 2️ (Optional but Recommended) Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+Activate it:
+
+**Windows**
+
+```bash
+venv\Scripts\activate
+```
+
+**Mac/Linux**
+
+```bash
+source venv/bin/activate
+```
+
+---
+
+### 3️ Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+### 4️ Run the Application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+### 5️ Open in Browser
+
+After running the command, Streamlit will automatically open in your browser.
+
+If it doesn’t, open:
+
+```
+http://localhost:8501
+```
